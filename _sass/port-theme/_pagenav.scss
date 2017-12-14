@@ -39,10 +39,10 @@
                 background: none;
             }
             a {
-                color: $header-text-color-secondary;
+                color: $smoky-white;
                 padding: inherit;
                 &:hover {
-                    color: darken($header-text-color-secondary, 30%);
+                    color: $header-text-color-secondary;
                 }
                 &:hover,
                 &:active,
@@ -50,7 +50,7 @@
                     background: none;
                 }
                 &.active {
-                    color: #fff;
+                    color: $header-text-color-secondary;
                     background: none;
                 }
             }

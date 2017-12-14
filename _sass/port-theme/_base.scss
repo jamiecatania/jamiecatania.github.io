@@ -124,3 +124,12 @@ a.btn {
     /*vw is viewport height*/
     position: absolute;
 }
+
+#magic-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: $header-text-color-secondary;
+  }
