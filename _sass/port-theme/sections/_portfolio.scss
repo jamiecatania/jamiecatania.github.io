@@ -1,90 +1,113 @@
-
 .portfolio-section {
-  .filters {
-    list-style: none;
-    margin: 0 auto;
-    margin-bottom: 60px;
-    text-align: center;
-    border-bottom: 1px solid $divider;
-    .type {
-      margin-right: 30px;
-      list-style: none;
-      display: inline-block;
-      padding: 8px 15px;
-      color: $text-grey;
-      cursor: pointer;
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 500;
-      &:last-child {
-        margin-right: 0;
-      }
-      &.active {
-        color: $theme-color;
-        border-bottom: 2px solid $theme-color;
-      }
+    .filters {
+        list-style: none;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        text-align: center;
+        border-bottom: 1px solid $divider;
+        .type {
+            margin-right: 30px;
+            list-style: none;
+            display: inline-block;
+            padding: 8px 15px;
+            color: $text-grey;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                color: $theme-color;
+                border-bottom: 2px solid $theme-color;
+            }
+        }
     }
-  }
-  .item {
-    margin-bottom: 30px;
-    .figure {
-      margin-bottom: 0;
+    .item {
+        margin-bottom: 30px;
+        .figure {
+            margin-bottom: 0;
+        }
     }
-  }
-  .item-inner {
-    background: $theme-color;
-    color: #fff;
-    @include border-radius(2px);
-    position: relative;
-    @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-    &:hover {
-      background: lighten($theme-color, 2%);
-      img {
-        @include opacity(0.9);
-      }
-    }
-    .figure {
-
-      img {
-
-      }
-    }
-    .content {
-      padding: 30px;
-      padding-bottom: 75px;
-      position: relative;
-      a {
+    .item-inner {
+        background: $theme-color;
         color: #fff;
-      }
-      .sub-title {
-        font-size: 16px;
-        margin-top: 0;
-        margin-bottom: 5px;
-      }
-      .meta {
-        color: rgba(256, 256, 256, 0.8);
-        font-size: 14px;
-      }
-      .action {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-      }
+        @include border-radius(2px);
+        position: relative;
+        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+        &:hover {
+            background: lighten($theme-color, 2%);
+            img {
+                @include opacity(0.9);
+            }
+        }
+        .content {
+            padding: 30px;
+            padding-bottom: 75px;
+            position: relative;
+            a {
+                color: #fff;
+            }
+            .sub-title {
+                font-size: 16px;
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+            .meta {
+                color: rgba(256, 256, 256, 0.8);
+                font-size: 14px;
+            }
+            .action {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+            }
+        }
+        .link-mask {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
     }
-    .link-mask {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
+    .modal-dialog {
+        min-width: 50%;
+        h1 {
+            text-align: right;
+            padding-right: 1rem;
+        }
+        table td {
+            border: none;
+        }
+        td:last-child p {
+            margin-bottom: 0;
+        }
+
+        td ul {
+          margin-bottom: 0;
+        }
+        @media only screen and (max-width: 1200px) {
+            /* Force table to not be like tables anymore */
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+            td:first-child {
+                padding-bottom: 0;
+            }
+            td:last-child {
+                padding-top: 0;
+            }
+            h1 {
+                text-align: left;
+            }
+        }
     }
-  }
-
-  .modal-dialog {
-    min-width: 70%;
-  }
-
-
-
 }
