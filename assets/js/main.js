@@ -120,4 +120,13 @@ $(document).ready(function () {
     // }
 
     });
+
+    $(window).on('load resize orientationchange', function () {
+       var nameWidth = $('#intro-content > #name').width();
+       $('#intro-content').width(nameWidth + 'px');
+       $('#vid-wrapper').width(nameWidth + 'px');
+       
+        console.log(`nameWidth = ${nameWidth}`);
+        console.log(`nameWidth = ${nameWidth}`);
+        });
 });

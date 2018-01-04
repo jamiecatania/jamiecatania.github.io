@@ -56,17 +56,19 @@
             position: relative;
             text-align: center;
             padding: 0;
-            @include media-breakpoint-down(md) {
-                h1 {
-                    font-size: 4.236rem;
-                }
-                h3 {
-                    font-size: 1.618rem;
-                }
-            }
+            // @include media-breakpoint-down(md) {
+            //     h1 {
+            //         font-size: 4.236rem;
+            //     }
+            //     h3 {
+            //         font-size: 1.618rem;
+            //     }
+            // }
             #my-name-is {
                 margin-top: 5%;
-                margin-bottom: .4rem;                
+                margin-bottom: .4rem;   
+                font-weight: 300;
+                text-align: left;             
                 @media screen and (min-width: 400px) {
                     margin-top: 25%;
                     @media screen and (orientation: landscape) {
@@ -82,49 +84,60 @@
                 }
                 @media screen and (min-width: 1460px) {
                     margin-top: 5%;
+                    // padding-left: 14rem;
                 }
             }
 
             #name {
                 margin-top: 0;
-                margin-bottom: 2rem;
-                @media screen and (orientation: landscape) {
-                    margin-bottom: .4rem;
-                }
+                margin-bottom: 3rem;
+                // @media screen and (orientation: landscape) {
+                //     margin-bottom: .4rem;
+                // }
             }
 
             #design-exp {
+                text-align: right;
                 margin-top: 0;
                 margin-bottom: 0;
+                font-weight: 400;
+                // padding-right: 14rem;
                 @media screen and (max-width: 700px) and (orientation: landscape) {
                     display: none;
                 }
             }
 
             #vid-wrapper{
-                max-width: 100%;
+                width: 100%;
                 margin-top: 0;
                 margin-bottom: 0;
                 padding: 0;
+                border-radius: 7px; 
                 @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-
-                @include media-breakpoint-up(sm) {
-                    border-radius: 7px;                    
-                }
+                @include transition (all 0.4s ease-in-out);
                 
-                @include media-breakpoint-up(xl) {
-                    margin-top: 3rem;
-                    width: 60%;
+
+                &:hover {
+                    @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
                 }
-                @media screen and (max-width: 800px) and (orientation: landscape) {
-                    width: 70%;
-                }
-                @media screen and (max-width: 700px) and (orientation: landscape) {
-                    width: 90%;
-                }
-                @media screen and (max-width: 600px) and (orientation: landscape) {
-                    width: 55%;
-                }
+
+                // @include media-breakpoint-up(sm) {
+                //     border-radius: 7px;                    
+                // }
+                
+                // @include media-breakpoint-up(xl) {
+                //     margin-top: 1rem;
+                //     width: 65%;
+                // }
+                // @media screen and (max-width: 800px) and (orientation: landscape) {
+                //     width: 70%;
+                // }
+                // @media screen and (max-width: 700px) and (orientation: landscape) {
+                //     width: 90%;
+                // }
+                // @media screen and (max-width: 600px) and (orientation: landscape) {
+                //     width: 55%;
+                // }
             }
 
             .rounded {

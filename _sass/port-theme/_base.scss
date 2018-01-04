@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: $text-color-secondary;
     font-style: normal;
@@ -43,12 +43,15 @@ h6 {
 .h1,
 h1 {
     font-size: 6.854em;
-    font-weight: 700;
+    font-weight: 600;
     &.alternative-style {
         text-align: center;
         color: $header-text-color-secondary;
-        text-shadow: -2px 2px 0 #666666;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, .2);
         line-height: 0.9;
+        font-size: 150%;
+        font-size: 5vw;
+        min-width: 260px;
     }
 }
 
