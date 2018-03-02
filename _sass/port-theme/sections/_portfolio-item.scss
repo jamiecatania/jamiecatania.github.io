@@ -278,7 +278,6 @@ $baseline-height: 1.6rem;
             width: 50%;
             max-width: 1140px;
             padding-top: .4rem;
-            
             @include media-breakpoint-down(lg) {
                 width: 90%;
             }
@@ -294,7 +293,6 @@ $baseline-height: 1.6rem;
             @media (min-width: 1200px) {
                 max-width: 1140px;
             }
-            
             a:hover {
                 text-decoration: none;
             }
@@ -411,6 +409,102 @@ $baseline-height: 1.6rem;
             color: $purple;
             .card-title {
                 color: $purple;
+            }
+        }
+    }
+    .dlcs {
+        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+        padding: 45px;
+        background: #fff;
+        margin-bottom: 45px;
+        @include border-radius(2px);
+        &:first-child {
+            margin-top: 4.224rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            line-height: 1.8;
+        }
+        img {
+            max-width: 100%;
+        }
+        a {
+            color: black;
+            text-decoration: underline wavy $purple;
+        }
+        .post {
+            display: grid;
+            max-width: 1000px;
+            margin: auto;
+            grid-gap: 10px 50px;
+            grid-template-columns: 4fr 2fr;
+            align-items: center;
+        }
+        // .post>* {
+        //     padding: 4%;
+        // }
+        // .post>h2 {
+        //     grid-column: 1 / -1;
+        // }
+        .post>.left {
+            grid-column: 1 / span 1;
+            padding: 4%;
+        }
+        .post>.right {
+            grid-column: span 1 / -1;
+            padding: 4%;
+        }
+        .post>.full-width {
+            grid-column: 1 / -1;
+        }
+        .post .design-question {
+            background-color: $purple;
+            color: $smoky-white;
+            width: 100%;
+            padding: 4%;
+            font-weight: 200;
+            text-align: center;
+        }
+        .post>figure {
+            margin: 0;
+            grid-column: 1 / -1;
+        }
+        figcaption {
+            font-size: 10px;
+        }
+        .post>blockquote {
+            grid-column: 1 / -1;
+            font-size: 60px;
+            font-style: italic;
+            text-align: center;
+            margin: 0;
+        }
+        .tip {
+            background: #FAFAFA;
+            padding: 10px;
+            grid-row: span 5;
+            // align-self: start;
+        }
+        .tip-left {
+            grid-column: 1 / span 1;
+            text-align: right;
+            border-right: 2px solid $purple;
+        }
+        .tip-right {
+            grid-column: span 1 / -1;
+            border-left: 2px solid $purple;
+        }
+
+        @media (max-width: 700px) {
+            .post {
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+            .post>* {
+            grid-column: 1 / -1;
+            padding: 0;
             }
         }
     }
