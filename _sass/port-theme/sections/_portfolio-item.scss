@@ -1,261 +1,10 @@
 $baseline-height: 1.6rem;
 .portfolio-item {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
     padding-top: 4rem;
     @include media-breakpoint-down(md) {
         padding-top: 7rem;
-    }
-    .sub-section {
-        padding-top: $baseline-height;
-        margin: 0 auto;
-        width: 90%;
-    }
-    .container {
-        width: 50%;
-        padding-top: $baseline-height;
-        @include media-breakpoint-down(lg) {
-            width: 90%;
-        }
-        @include media-breakpoint-down(md) {
-            padding-top: 3.25rem;
-        }
-    }
-    .content {
-        margin: 0 auto;
-        padding: 0;
-    }
-    .card {
-        margin: .5rem .5rem;
-        padding: 0;
-    }
-    #portfolio-images {
-        width: 100%;
-        margin-top: $baseline-height;
-        padding: 0;
-    }
-    .mission {
-        font-size: 1.618rem;
-        color: $purple;
-        width: 100%;
-        border-left: 1px solid $text-color;
-        border-right: 1px solid $text-color;
-        text-align: center;
-        padding: .5rem 2.5%;
-    }
-    h2 {
-        text-decoration: none;
-        text-shadow: #fff 0 3px 1px;
-        text-align: center;
-        background-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
-        background-position: bottom left;
-        background-repeat: no-repeat;
-        background-size: 100% .3rem;
-        color: $text-color;
-        line-height: 4.9rem;
-        margin: 0 auto .7rem;
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            font-size: 2.618em;
-            line-height: 3rem;
-        }
-    }
-    h3 {
-        width: 90%;
-        color: $teal;
-        margin-top: 0;
-        margin-bottom: .95rem;
-        margin-bottom: 1rem;
-        padding-top: 0.8rem;
-        @include media-breakpoint-down(xs) {
-            margin-bottom: 1rem;
-        }
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 1.25rem;
-        }
-        @include media-breakpoint-down(md) {
-            width: 100%;
-        }
-        &.title {
-            width: 90%;
-            text-decoration: none;
-            background-image: linear-gradient(120deg, #4CA0B9 0%, #A5D491 100%);
-            background-position: bottom left;
-            background-repeat: no-repeat;
-            background-size: 100% .3rem;
-        }
-    }
-    h4 {
-        width: 90%;
-        line-height: 1.6rem;
-        margin-top: 0;
-        margin-bottom: 1.38rem;
-        padding-top: 0.25rem;
-        @include media-breakpoint-down(md) {
-            width: 100%;
-        }
-    }
-    h5 {
-        line-height: 2.6rem;
-        margin-top: 0;
-        margin-bottom: 0.7rem;
-        text-align: center;
-    }
-    ul {
-        margin-top: 0;
-        margin-bottom: 1.2rem;
-        line-height: 1.65rem;
-        font-size: 1rem;
-        list-style-type: circle;
-        list-style-position: outside;
-        &.checkboxes li {
-            list-style-type: none;
-            margin: 0 auto;
-            i {
-                padding-right: 1rem;
-            }
-            p {
-                margin-bottom: 1.2rem;
-                color: $text-grey;
-                @include transition(all 0.2s ease-in-out);
-                &:before {
-                    font-family: FontAwesome;
-                    content: "\f096";
-                    position: absolute;
-                    left: -3px;
-                    @include media-breakpoint-down(md) {
-                        left: 0;
-                    }
-                }
-            }
-            &:hover p {
-                color: $text-color;
-                &:before {
-                    content: "\f046";
-                }
-            }
-        }
-    }
-    img {
-        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-        @include transition(all 0.2s ease-in-out);
-        cursor: zoom-in;
-        &:hover {
-            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
-            @include translate(.05rem, -.05rem);
-        }
-        &.external {
-            cursor: pointer;
-        }
-        +.img-desc {
-            font-size: 14px;
-            color: $text-grey;
-        }
-    }
-    .modal-body {
-        img {
-            cursor: default;
-            @include transition(none);
-            &:hover {
-                @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-                @include translate(0px, 0px);
-            }
-        }
-    }
-    p {
-        margin-top: 0;
-        margin-bottom: 1.2rem;
-        padding-top: 0.4rem;
-        font-size: 1rem;
-        ;
-        line-height: 1.65rem;
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            font-size: 14px;
-        }
-    }
-    .gla-questions {
-        padding: 0.75rem 0;
-        margin: 0;
-        position: relative;
-        @include transition(all 0.2s ease-in-out);
-        .count p {
-            display: inline-block;
-            color: $teal;
-            font-size: 5rem;
-            line-height: 60px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-25%, -50%);
-            margin: 0;
-            padding: 0;
-            @include transition(all 0.2s ease-in-out);
-        }
-        .question {
-            padding: 0 1rem 0;
-            margin-bottom: 0;
-        }
-        &:hover {
-            background-color: #f5f5f5;
-            color: $purple;
-            @include transform(scaleX(1.03));
-            .count p {
-                color: $purple;
-            }
-        }
-    }
-    .single-slide {
-        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-        margin-bottom: 2.45rem;
-        @include transition(all 0.2s ease-in-out);
-        &:hover {
-            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
-        }
-    }
-    .carousel.slide {
-        @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
-        margin-bottom: 2.45rem;
-        @include transition(all 0.2s ease-in-out);
-        &:hover {
-            @include box-shadow(0 8px 12px rgba(0, 0, 0, .2));
-        }
-        .carousel-indicators {
-            bottom: -2rem;
-        }
-        .carousel-indicators li {
-            background-color: rgba(0, 0, 0, .2);
-            &.active {
-                background-color: $teal;
-            }
-        }
-        .slide-control {
-            color: $teal;
-            background-color: none;
-            height: 100%;
-            opacity: .6;
-            font-size: 80px;
-            left: -50px;
-            padding: 0 10px;
-            position: absolute;
-            top: 0;
-            &:hover {
-                opacity: 1;
-            }
-            i {
-                transform: translate(0, -50%);
-                position: relative;
-                top: 50%;
-            }
-        }
-        .slide-control.right {
-            left: auto;
-            right: -50px;
-        }
-        .carousel-inner {
-            height: 100%;
-            .carousel-item {
-                height: 100%;
-            }
-        }
     }
     .navbar {
         position: fixed;
@@ -275,7 +24,7 @@ $baseline-height: 1.6rem;
         .nav-links {
             margin: 0 auto;
             padding: 0;
-            width: 50%;
+            width: 40%;
             max-width: 1140px;
             padding-top: .4rem;
             @include media-breakpoint-down(lg) {
@@ -329,182 +78,172 @@ $baseline-height: 1.6rem;
             }
         }
     }
-    .goals {
-        width: 90%;
-        margin: 0 auto 2.5rem;
-        .links {
-            padding-top: .5rem;
-            margin-bottom: -.255rem;
-        }
-        .collapse.show {
-            display: inline;
-        }
-        .list-group-item {
-            border: none;
-            display: inline;
-            padding: 0 0.75rem;
-            @include transition(all 0.1s ease-in-out);
-            &:hover {
-                background: none;
-                color: $teal;
-                font-weight: bold;
-            }
-            &.active {
-                background: none;
-                color: $teal;
-                font-weight: bold;
-                text-decoration: underline solid $text-grey;
-            }
-        }
-        .tabs {
-            margin: 2rem auto 0;
-            padding-top: 1.6rem;
-            @include transition(height 0.2s east-out);
-            h4 {
-                line-height: 2.35rem;
-            }
-            .tab-content:before {
-                content: " ";
-                position: absolute;
-                border-left: 2px solid #666;
-                border-top: 2px solid #666;
-                border-bottom: 2px solid #666;
-                padding: 5px;
-                top: -10px;
-                bottom: -10px;
-                left: -5px;
-            }
-            .tab-content:after {
-                content: " ";
-                position: absolute;
-                border-right: 2px solid #666;
-                border-top: 2px solid #666;
-                border-bottom: 2px solid #666;
-                padding: 5px;
-                top: -10px;
-                bottom: -10px;
-                right: -5px;
-            }
-        }
-    }
-    .card-columns {
-        @include media-breakpoint-up(lg) {
-            column-count: 3;
+    .page-header {
+        grid-column: 2 / span 1;
+        padding-top: $baseline-height;
+        @include media-breakpoint-down(lg) {
+            width: 90%;
         }
         @include media-breakpoint-down(md) {
-            column-count: 2;
+            padding-top: 3.25rem;
+        }
+    }
+    p {
+        line-height: 1.8;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        color: black;
+        text-decoration: underline wavy $purple;
+    }
+    h2 {
+        text-decoration: none;
+        text-shadow: #f5f5f5 0 3px 1px;
+        text-align: center;
+        // background-image: linear-gradient(-225deg, $teal 0%, #6B8DD6 48%, $purple 100%);
+        background-image: linear-gradient(-225deg, $theme-color 0%, $theme-color 100%);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 100% .3rem;
+        color: $text-color;
+        line-height: 4.9rem;
+        margin: 0 auto;
+        grid-column: 2 / span 1;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            font-size: 2.618em;
+            line-height: 3rem;
+        }
+    }
+    h3 {
+        width: 90%;
+        color: $theme-color;
+        margin-top: 0;
+        margin-bottom: .95rem;
+        margin-bottom: 1rem;
+        padding-top: 0.8rem;
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 1rem;
         }
         @include media-breakpoint-down(sm) {
-            column-count: 1;
+            margin-bottom: 1.25rem;
         }
-    }
-    .insight {
-        @include transition(all 0.2s ease-in-out);
-        cursor: default;
-        .card-title {
-            @include transition(all 0.2s ease-in-out);
-        }
-        &:hover {
-            background-color: #f5f5f5;
-            color: $purple;
-            .card-title {
-                color: $purple;
-            }
-        }
-    }
-    .dlcs {
-        @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-        padding: 45px;
-        background: #fff;
-        margin-bottom: 45px;
-        @include border-radius(2px);
-        &:first-child {
-            margin-top: 4.224rem;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-        p {
-            line-height: 1.8;
-        }
-        img {
-            max-width: 100%;
-        }
-        a {
-            color: black;
-            text-decoration: underline wavy $purple;
-        }
-        .post {
-            display: grid;
-            max-width: 1000px;
-            margin: auto;
-            grid-gap: 10px 50px;
-            grid-template-columns: 4fr 2fr;
-            align-items: center;
-        }
-        // .post>* {
-        //     padding: 4%;
-        // }
-        // .post>h2 {
-        //     grid-column: 1 / -1;
-        // }
-        .post>.left {
-            grid-column: 1 / span 1;
-            padding: 4%;
-        }
-        .post>.right {
-            grid-column: span 1 / -1;
-            padding: 4%;
-        }
-        .post>.full-width {
-            grid-column: 1 / -1;
-        }
-        .post .design-question {
-            background-color: $purple;
-            color: $smoky-white;
+        @include media-breakpoint-down(md) {
             width: 100%;
-            padding: 4%;
-            font-weight: 200;
-            text-align: center;
         }
-        .post>figure {
-            margin: 0;
-            grid-column: 1 / -1;
-        }
-        figcaption {
-            font-size: 10px;
-        }
-        .post>blockquote {
-            grid-column: 1 / -1;
-            font-size: 60px;
-            font-style: italic;
-            text-align: center;
-            margin: 0;
-        }
-        .tip {
-            background: #FAFAFA;
-            padding: 10px;
-            grid-row: span 5;
-            // align-self: start;
-        }
-        .tip-left {
-            grid-column: 1 / span 1;
-            text-align: right;
-            border-right: 2px solid $purple;
-        }
-        .tip-right {
-            grid-column: span 1 / -1;
-            border-left: 2px solid $purple;
-        }
-
-        @media (max-width: 700px) {
-            .post {
-                grid-template-columns: 1fr;
-                grid-gap: 0;
+    }
+    h5 {
+        // line-height: 2.6rem;
+        margin: 0;
+        text-align: center;
+        color: $text-grey;
+        grid-column: 2 / span 1;
+    }
+    .post {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-gap: 0 32px;
+        grid-template-columns: 1fr 40% 1fr;
+        
+        .content {
+            grid-column: 2 / span 1;
+            box-sizing: border-box;
+            // @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+            padding: 0 15%;
+            background: #fff;
+            // margin-bottom: 45px;
+            @include border-radius(2px);
+            &:first-child {
+                margin-top: 2rem;
             }
-            .post>* {
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+        }
+        .start {
+            padding-top: 45px;
+        }
+        .end {
+            padding-bottom: 45px;
+        }
+    }
+    .post .design-question {
+        color: $text-grey;
+        width: 100%;
+        padding: 5%;
+        font-weight: 200;
+        text-align: left;
+        border-left: 1px solid $theme-color;
+        border-right: 1px solid $theme-color;
+    }
+    .design-question h3 {
+        color: white;
+        margin: auto;
+        font-style: italic;
+    }
+    .post>figure {
+        margin: 0;
+    }
+    figcaption {
+        font-size: 12px;
+    }
+    .post>blockquote {
+        grid-column: 1 / -1;
+        font-size: 60px;
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+    }
+    .tip {
+        background: #FAFAFA;
+        padding: 10px;
+        align-self: start;
+        box-sizing: border-box;
+        grid-row: span 2;
+        min-width: 258.75px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        @include transition (all 0.2s);
+
+        &:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            @include translate(.05rem, -.05rem); 
+                }
+    }
+    .tip-left {
+        grid-column: 1 / span 1;
+        text-align: right;
+        border-right: 1px solid $theme-color;
+        margin-left: 32px;
+        justify-self: end;
+    }
+    .tip-right {
+        grid-column: span 1 / -1;
+        border-left: 1px solid $theme-color;
+        margin-right: 32px;
+    }
+    @media (max-width: 700px) {
+        .post {
+            grid-template-columns: 1fr;
+            grid-gap: 0;
+        }
+        .post>* {
             grid-column: 1 / -1;
             padding: 0;
+        }
+    }
+    img {
+        cursor: zoom-in;
+    }
+    .modal-body {
+        img {
+            cursor: default;
+            @include transition(none);
+            &:hover {
+                @include box-shadow(0 4px 12px rgba(0, 0, 0, .2));
+                @include translate(0px,
+                0px);
             }
         }
     }
