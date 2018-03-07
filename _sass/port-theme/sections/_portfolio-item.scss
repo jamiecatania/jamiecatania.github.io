@@ -1,10 +1,24 @@
 $baseline-height: 1.6rem;
+$article-width: 45%;
 .portfolio-item {
     display: grid;
-    grid-template-columns: 1fr 45% 1fr;
+    grid-template-columns: 1fr $article-width 1fr;
     padding-top: 4rem;
     @include media-breakpoint-down(md) {
         padding-top: 7rem;
+    }
+
+    @media (min-width: 576px) {
+        $article-width: 540px;
+    }
+    @media (min-width: 768px) {
+        $article-width: 720px;
+    }
+    @media (min-width: 992px) {
+        $article-width: 960px;
+    }
+    @media (min-width: 1200px) {
+        $article-width: 1140px;
     }
     .navbar {
         position: fixed;
@@ -160,7 +174,7 @@ $baseline-height: 1.6rem;
         grid-column: 1 / -1;
         display: grid;
         grid-gap: 0 32px;
-        grid-template-columns: 1fr 45% 1fr;
+        grid-template-columns: 1fr $article-width 1fr;
         
         .content {
             grid-column: 2 / span 1;
@@ -220,7 +234,13 @@ $baseline-height: 1.6rem;
         padding: 1rem 0;
     }
     .body-img {
-        border: 1px solid $text-grey;
+        margin: 1rem auto;
+        img {
+            border: 1px solid $text-grey;
+        }
+        &:hover {
+            cursor: zoom-in;
+        }
         // padding: 1rem;
     }
     .tip {
@@ -238,6 +258,10 @@ $baseline-height: 1.6rem;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             @include translate(.05rem, -.05rem); 
                 }
+
+        &.bottom {
+            align-self: end;
+        }
     }
     .tip-left {
         grid-column: 1 / span 1;
@@ -263,6 +287,9 @@ $baseline-height: 1.6rem;
     }
     img {
         cursor: zoom-in;
+        &:hover {
+            cursor: zoom-in;
+        }
     }
     .modal-body {
         img {
