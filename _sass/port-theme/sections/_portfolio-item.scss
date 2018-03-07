@@ -1,7 +1,7 @@
 $baseline-height: 1.6rem;
 .portfolio-item {
     display: grid;
-    grid-template-columns: 1fr 40% 1fr;
+    grid-template-columns: 1fr 45% 1fr;
     padding-top: 4rem;
     @include media-breakpoint-down(md) {
         padding-top: 7rem;
@@ -24,7 +24,7 @@ $baseline-height: 1.6rem;
         .nav-links {
             margin: 0 auto;
             padding: 0;
-            width: 40%;
+            width: 45%;
             max-width: 1140px;
             padding-top: .4rem;
             @include media-breakpoint-down(lg) {
@@ -78,6 +78,18 @@ $baseline-height: 1.6rem;
             }
         }
     }
+    #sample-vid {
+        width: 100%;
+        margin: 2rem auto;
+        padding: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        @include transition (all 0.2s);
+
+        &:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            @include translate(.05rem, -.05rem); 
+                }
+    }
     .page-header {
         grid-column: 2 / span 1;
         padding-top: $baseline-height;
@@ -97,6 +109,9 @@ $baseline-height: 1.6rem;
     a {
         color: black;
         text-decoration: underline wavy $purple;
+    }
+    li {
+        line-height: 1.8;
     }
     h2 {
         text-decoration: none;
@@ -134,9 +149,9 @@ $baseline-height: 1.6rem;
             width: 100%;
         }
     }
-    h5 {
+    h5.category {
         // line-height: 2.6rem;
-        margin: 0;
+        margin: 1rem 0;
         text-align: center;
         color: $text-grey;
         grid-column: 2 / span 1;
@@ -145,18 +160,18 @@ $baseline-height: 1.6rem;
         grid-column: 1 / -1;
         display: grid;
         grid-gap: 0 32px;
-        grid-template-columns: 1fr 40% 1fr;
+        grid-template-columns: 1fr 45% 1fr;
         
         .content {
             grid-column: 2 / span 1;
             box-sizing: border-box;
             // @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
-            padding: 0 15%;
+            padding: 0 10%;
             background: #fff;
             // margin-bottom: 45px;
             @include border-radius(2px);
             &:first-child {
-                margin-top: 2rem;
+                // margin-top: 2rem;
             }
             &:last-child {
                 margin-bottom: 2rem;
@@ -189,19 +204,32 @@ $baseline-height: 1.6rem;
     figcaption {
         font-size: 12px;
     }
-    .post>blockquote {
+    .post blockquote {
         grid-column: 1 / -1;
-        font-size: 60px;
+        font-size: 2rem;
         font-style: italic;
-        text-align: center;
-        margin: 0;
+        text-align: left;
+        width: 90%;
+        margin: 2rem auto;
+        line-height: 1.2;
+        // margin-bottom: 2rem;
+        color: $text-grey;
+        font-weight: 200;
+        border-top: 1px solid $theme-color;
+        border-bottom: 1px solid $theme-color;
+        padding: 1rem 0;
+    }
+    .body-img {
+        border: 1px solid $text-grey;
+        // padding: 1rem;
     }
     .tip {
         background: #FAFAFA;
         padding: 10px;
         align-self: start;
         box-sizing: border-box;
-        grid-row: span 2;
+        grid-row: span 1;
+        overflow-y: normal;
         min-width: 258.75px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         @include transition (all 0.2s);
