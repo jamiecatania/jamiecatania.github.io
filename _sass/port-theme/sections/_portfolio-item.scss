@@ -241,7 +241,6 @@ $baseline-height: 1.6rem;
         &:hover {
             background-color: #f5f5f5;
             color: $purple;
-            @include transform(scaleX(1.03));
             .count p {
                 color: $purple;
             }
